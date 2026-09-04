@@ -1,6 +1,6 @@
 # DockerHub
 
-![Docker Hub 首页](assets/docker-hub-homepage.png)
+![Docker 标志](assets/docker-logo-gallery.png)
 
 Docker Hub 官方地址：[https://hub.docker.com/](https://hub.docker.com/)
 
