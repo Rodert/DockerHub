@@ -36,6 +36,33 @@ Docker Hub 官方地址：[https://hub.docker.com/](https://hub.docker.com/)
 
 > 官方镜像需要带上 `library` 命名空间，例如 `library/nginx`；个人或组织镜像则使用实际命名空间，例如 `username/image:tag`。
 
+### 配置示例
+
+Linux 上可创建或编辑 `/etc/docker/daemon.json`，填入一个或多个镜像地址：
+
+```json
+{
+  "registry-mirrors": [
+    "https://docker.1ms.run",
+    "https://dockerproxy.net",
+    "https://dockerproxy.link"
+  ]
+}
+```
+
+保存后重启 Docker：
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+使用以下命令验证拉取是否正常：
+
+```sh
+docker pull nginx:latest
+```
+
 ## 共同维护
 
 欢迎大家提交好用的 Docker 镜像，也欢迎反馈失效地址，共同维护这一生态。我会持续维护并定期更新镜像项目。
