@@ -37,7 +37,3 @@
 欢迎大家提交好用的 Docker 镜像，也欢迎反馈失效地址，共同维护这一生态。我会持续维护并定期更新镜像项目。
 
 由于一些原因，国内访问 Docker 镜像目前存在困难。本仓库将作为 DockerHub 的灯塔持续维护，且用且珍惜。
-
-## 参考
-
-- [dongyubin/DockerHub](https://github.com/dongyubin/DockerHub)
