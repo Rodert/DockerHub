@@ -1,5 +1,9 @@
 # DockerHub
 
+![Docker Hub 首页](assets/docker-hub-homepage.png)
+
+Docker Hub 官方地址：[https://hub.docker.com/](https://hub.docker.com/)
+
 2026 年 9 月 Docker 国内可用资源整理：Docker 工具下载与 Docker Hub 镜像地址。
 
 ## 菜单
@@ -37,3 +41,9 @@
 欢迎大家提交好用的 Docker 镜像，也欢迎反馈失效地址，共同维护这一生态。我会持续维护并定期更新镜像项目。
 
 由于一些原因，国内访问 Docker 镜像目前存在困难。本仓库将作为 DockerHub 的灯塔持续维护，且用且珍惜。
+
+## 推荐
+
+以下内容为本站推荐，后续可能会补充其他推荐站点。
+
+- [ChatGPT 充值站点](https://chatgptopenplus.com/)
