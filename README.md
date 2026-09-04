@@ -79,6 +79,4 @@ docker pull nginx:latest
 
 ## 推荐
 
-以下内容为本站推荐，后续可能会补充其他推荐站点。
-
 - [ChatGPT 充值站点](https://chatgptopenplus.com/)
