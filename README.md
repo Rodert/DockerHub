@@ -63,6 +63,14 @@ sudo systemctl restart docker
 docker pull nginx:latest
 ```
 
+### Windows 与 macOS 配置
+
+Windows 和 macOS 使用 Docker Desktop 时，打开 **Settings**，进入 **Docker Engine**，将上述 JSON 合并到配置中，点击 **Apply & Restart** 保存并重启 Docker。完成后同样可执行以下命令验证：
+
+```sh
+docker pull nginx:latest
+```
+
 ## 共同维护
 
 欢迎大家提交好用的 Docker 镜像，也欢迎反馈失效地址，共同维护这一生态。我会持续维护并定期更新镜像项目。
