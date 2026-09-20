@@ -1,4 +1,4 @@
-# DockerHub 集中营
+# DockerHub 镜像集中营
 
 ![Docker 标志](assets/docker-logo-gallery.png)
 
