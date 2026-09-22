@@ -77,6 +77,7 @@ docker pull nginx:latest
 
 由于一些原因，国内访问 Docker 镜像目前存在困难。本仓库将作为 DockerHub 的灯塔持续维护，且用且珍惜。
 
-## 推荐
+## 推荐站点
 
 - [ChatGPT 充值站点](https://chatgptopenplus.com/)
+- [科学上网工具](https://tinyurl.com/network-saku)
