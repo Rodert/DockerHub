@@ -73,6 +73,102 @@ Windows 和 macOS 使用 Docker Desktop 时，打开 **Settings**，进入 **Doc
 docker pull nginx:latest
 ```
 
+## 各系统详细配置
+
+下面的配置仅用于 Docker Hub 镜像拉取，不会修改镜像名称或容器启动参数。`registry-mirrors` 可以填写一个或多个地址，保存后建议使用 `docker info` 和 `docker pull` 验证。
+
+### Windows（Docker Desktop）
+
+1. 打开 Docker Desktop，点击右上角 **Settings**。
+2. 进入 **Docker Engine**，在现有 JSON 中加入 `registry-mirrors` 配置。不要删除原有的其他配置项。
+3. 点击 **Apply & Restart**，等待 Docker Desktop 重启完成。
+4. 在 PowerShell 中验证：
+
+```powershell
+docker info
+docker pull nginx:latest
+```
+
+Windows Docker Desktop 使用的是内部 Linux 虚拟机，通常不需要手动编辑 Windows 文件。若使用的是 Windows Server 上的 Docker Engine，可编辑 `C:\ProgramData\docker\config\daemon.json`，然后执行：
+
+```powershell
+Restart-Service docker
+docker info
+```
+
+### macOS（Docker Desktop）
+
+1. 打开 Docker Desktop，进入 **Settings** → **Docker Engine**。
+2. 将 `registry-mirrors` 合并到右侧 JSON 配置中。
+3. 点击 **Apply & Restart**，等待 Docker Desktop 完成重启。
+4. 在 Terminal 中验证：
+
+```sh
+docker info
+docker pull nginx:latest
+```
+
+macOS Docker Desktop 同样运行在内部 Linux 虚拟机中，一般不需要直接修改 macOS 本地文件。
+
+### Linux（Docker Engine）
+
+适用于 Ubuntu、Debian、CentOS、Rocky Linux 等使用 systemd 管理 Docker 的系统：
+
+1. 创建 Docker 配置目录：
+
+```sh
+sudo mkdir -p /etc/docker
+```
+
+2. 编辑 `/etc/docker/daemon.json`，写入以下内容；如果文件已有配置，请合并 JSON 字段，不要重复添加第二个 `registry-mirrors`：
+
+```json
+{
+  "registry-mirrors": [
+    "https://docker.1ms.run",
+    "https://dockerproxy.net",
+    "https://dockerproxy.link"
+  ]
+}
+```
+
+3. 重新加载配置并重启 Docker：
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+4. 检查镜像地址是否已生效并测试拉取：
+
+```sh
+docker info
+docker pull nginx:latest
+```
+
+如果 Docker 无法启动，先检查 JSON 格式和日志：
+
+```sh
+sudo systemctl status docker
+sudo journalctl -u docker --no-pager -n 50
+```
+
+### Linux Rootless Docker
+
+Rootless 模式不使用 `/etc/docker/daemon.json`，配置文件通常位于 `~/.config/docker/daemon.json`：
+
+```sh
+mkdir -p ~/.config/docker
+```
+
+写入同样的 `registry-mirrors` 配置后，重启当前用户的 Docker 服务：
+
+```sh
+systemctl --user restart docker
+docker info
+docker pull nginx:latest
+```
+
 ## 共同维护
 
 欢迎大家提交好用的 Docker 镜像，也欢迎反馈失效地址，共同维护这一生态。我会持续维护并定期更新镜像项目。
