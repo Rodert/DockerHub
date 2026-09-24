@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DockerHub 镜像集中营</title>
+  <meta name="description" content="Docker 工具下载与 Docker Hub 镜像地址整理">
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; color: #17202a; background: #f4f7fb; line-height: 1.6; }
+    main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+    header { padding: 36px; color: #fff; background: linear-gradient(135deg, #0b63ce, #19a7ce); border-radius: 16px; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.5rem); }
+    header p { margin: 0; font-size: 1.1rem; opacity: .94; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    nav a, .official { color: #075dbb; font-weight: 600; }
+    nav a { padding: 10px 14px; background: #fff; border-radius: 8px; text-decoration: none; }
+    section { margin-top: 28px; padding: 28px; background: #fff; border: 1px solid #dce5ef; border-radius: 12px; }
+    h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid #e7edf3; }
+    code { padding: 2px 5px; color: #17324d; background: #eef3f8; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 16px; color: #e9f3ff; background: #172b3d; border-radius: 8px; }
+    footer { margin-top: 28px; color: #637283; font-size: .95rem; }
+    @media (max-width: 700px) { main { width: min(100% - 20px, 1100px); padding-top: 20px; } section, header { padding: 20px; } th, td { font-size: .9rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>DockerHub 镜像集中营</h1>
+      <p>Docker 工具下载与 Docker Hub 镜像地址整理。</p>
+    </header>
+    <nav aria-label="页面导航">
+      <a href="#tools">Docker 工具下载</a>
+      <a href="#mirrors">Docker 镜像</a>
+      <a href="https://hub.docker.com/">Docker Hub 官方地址</a>
+    </nav>
+    <section id="tools">
+      <h2>Docker 工具下载</h2>
+      <p>仅收录官方提供、可免费使用的 Docker 工具与文档。</p>
+      <ul>
+        <li><a href="https://docs.docker.com/engine/install/">Docker Engine</a></li>
+        <li><a href="https://docs.docker.com/compose/install/linux/">Docker Compose Plugin</a></li>
+        <li><a href="https://docs.docker.com/engine/install/binaries/">Docker CLI 静态二进制包</a></li>
+      </ul>
+    </section>
+    <section id="mirrors">
+      <h2>Docker 镜像</h2>
+      <p>公共镜像服务可能限流或失效，请按实际情况选择。</p>
+      <table>
+        <thead><tr><th>服务</th><th>镜像地址</th><th>使用示例</th></tr></thead>
+        <tbody>
+          <tr><td>1Panel 镜像</td><td><code>docker.1panel.live</code></td><td><code>docker pull docker.1panel.live/library/nginx:latest</code></td></tr>
+          <tr><td>毫秒镜像</td><td><code>docker.1ms.run</code></td><td><code>docker pull docker.1ms.run/library/nginx:latest</code></td></tr>
+          <tr><td>Docker Proxy</td><td><code>dockerproxy.net</code></td><td><code>docker pull dockerproxy.net/library/nginx:latest</code></td></tr>
+          <tr><td>Docker Proxy</td><td><code>dockerproxy.link</code></td><td><code>docker pull dockerproxy.link/library/nginx:latest</code></td></tr>
+          <tr><td>DaoCloud 公共镜像</td><td><code>docker.m.daocloud.io</code></td><td><code>docker pull docker.m.daocloud.io/library/nginx:latest</code></td></tr>
+          <tr><td>简行镜像</td><td><code>docker.jiaxin.site</code></td><td><code>docker pull docker.jiaxin.site/library/nginx:latest</code></td></tr>
+        </tbody>
+      </table>
+      <h3>配置示例</h3>
+      <pre><code>{
+  "registry-mirrors": [
+    "https://docker.1ms.run",
+    "https://dockerproxy.net",
+    "https://dockerproxy.link"
+  ]
+}</code></pre>
+    </section>
+    <footer>欢迎提交好用的 Docker 镜像，或反馈失效地址，共同维护这一生态。</footer>
+  </main>
+</body>
+</html>
