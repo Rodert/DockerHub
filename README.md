@@ -2,6 +2,8 @@
 
 ![Docker 标志](assets/docker-logo-gallery.png)
 
+![DockerHub 主 Logo](assets/dockerhub-main-logo.png)
+
 Docker Hub 官方地址：[https://hub.docker.com/](https://hub.docker.com/)
 
 GitHub Pages：[https://rodert.github.io/DockerHub/](https://rodert.github.io/DockerHub/)
