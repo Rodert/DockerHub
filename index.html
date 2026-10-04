@@ -10,6 +10,7 @@
     body { margin: 0; color: #17202a; background: #f4f7fb; line-height: 1.6; }
     main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
     header { padding: 36px; color: #fff; background: linear-gradient(135deg, #0b63ce, #19a7ce); border-radius: 16px; }
+    .main-logo { display: block; width: 100%; height: auto; margin-bottom: 28px; border-radius: 8px; }
     h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.5rem); }
     header p { margin: 0; font-size: 1.1rem; opacity: .94; }
     nav { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
@@ -28,6 +29,7 @@
 <body>
   <main>
     <header>
+      <img class="main-logo" src="assets/dockerhub-main-logo.png" alt="DockerHub 主 Logo">
       <h1>DockerHub 镜像集中营</h1>
       <p>Docker 工具下载与 Docker Hub 镜像地址整理。</p>
     </header>

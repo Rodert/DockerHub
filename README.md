@@ -1,6 +1,6 @@
 # DockerHub 镜像集中营
 
-![Docker 标志](assets/docker-logo-gallery.png)
+<!-- ![Docker 标志](assets/docker-logo-gallery.png) -->
 
 ![DockerHub 主 Logo](assets/dockerhub-main-logo.png)
 
