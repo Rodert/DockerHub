@@ -181,3 +181,9 @@ docker pull nginx:latest
 
 - [ChatGPT 充值站点](https://chatgptopenplus.com/)
 - [科学上网工具](https://tinyurl.com/network-saku)
+
+## 公众号
+
+加微信群交流，关注公众号「**JavaPub**」，回复「**加群**」即可。
+
+![JavaPub 公众号二维码](assets/javapub-wechat-qrcode.png)
